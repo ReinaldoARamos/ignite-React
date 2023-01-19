@@ -6,9 +6,11 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div> 
-       <h1>ello</h1>
-   <Post />
+   <div>
+   <Post 
+   author= "Reinaldo"
+   content = "EBaaaaaaaaaa"
+/>
     </div>
    
   )

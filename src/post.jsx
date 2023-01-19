@@ -1,6 +1,10 @@
-function Post() {
+function Post(props) {
     return (
-        <p> post</p>
+        <div>
+            <p><strong>{props.author}</strong></p>
+             <p> {props.content}</p>
+        </div>
+       
     )
        
     

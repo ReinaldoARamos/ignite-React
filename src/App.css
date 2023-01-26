@@ -16,6 +16,12 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black;
-    color: #fff
+background: var(--grey800);
+color: var(--grey-300);
+}
+
+body, input, button, textarea{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
 }

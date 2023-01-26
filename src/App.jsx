@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import Post from './Post'
-import './App.css'
+import './global.css'
 import { Header } from './components/Header'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,10 +10,8 @@ function App() {
   return (
    <div>
    <Header/>
-   <Post 
-   author= "Reinaldo"
-   content = "EBaaaaaaaaaa"
-/>
+   
+   <div className='wrapper'></div>
     </div>
    
   )

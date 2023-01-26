@@ -12,7 +12,7 @@ function App() {
    <Header/>
    
    <div className={styles.wrapper}>
-    <aside></aside>
+    <aside>Sidebar</aside>
     <main>
       <Post 
       author="reinaldo"

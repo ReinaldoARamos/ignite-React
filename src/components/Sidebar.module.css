@@ -1,0 +1,5 @@
+.sidebar {
+    background: var(--grey-800);
+    border-radius: 8px;
+    overflow: hidden;
+}

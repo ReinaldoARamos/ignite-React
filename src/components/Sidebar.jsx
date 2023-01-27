@@ -16,7 +16,7 @@ export function Sidebar() {
 
           <span>Web Dev</span>
 
-          <footer>
+          <footer className={styles.footer}>
             <a href="#">Editar Perfil</a>
           </footer>
         </div>

@@ -3,6 +3,7 @@ import Post from './Post'
 import './global.css'
 import { Header } from './components/Header'
 import styles from './App.module.css'
+import { Sidebar } from './components/Sidebar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +13,7 @@ function App() {
    <Header/>
    
    <div className={styles.wrapper}>
-    <aside>Sidebar</aside>
+    <Sidebar/>
     <main>
       <Post 
       author="reinaldo"

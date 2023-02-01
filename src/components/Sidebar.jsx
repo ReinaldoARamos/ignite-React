@@ -19,7 +19,11 @@ export function Sidebar() {
           <span>Web Dev</span>
 
           <footer className={styles.footer}>
-            <a href="#">Editar Perfil</a>
+           
+            <a href="#">
+              Editar Perfil
+              <PencilLine size={20}/>
+              </a>
           </footer>
         </div>
       </aside>

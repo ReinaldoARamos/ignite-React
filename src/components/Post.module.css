@@ -1,1 +1,19 @@
-.Post{ }
+.Post{
+    background: var(--grey-600);
+    border-radius:  8px;
+    padding: 2.5rem;
+ }
+
+ .Post + .Post {  /*so aplica caso haja um post acima do post*/
+    margin-top: 2rem;
+ }
+
+ .content {
+    line-height: 1.6rem;
+    color: var(--grey-300);
+    margin-top: 1.5rem;
+ }
+
+ .content p{
+    margin-top: 1rem;
+ }

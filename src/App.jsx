@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import Post from './Post'
-import './global.css'
-import { Header } from './components/Header'
-import styles from './App.module.css'
+import {Post} from './components/Post'
 import { Sidebar } from './components/Sidebar'
+import { Header } from './components/Header'
+
+import styles from './App.module.css'
+import './global.css'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,14 +17,7 @@ function App() {
    <div className={styles.wrapper}>
     <Sidebar/>
     <main>
-      <Post 
-      author="reinaldo"
-      content="Edudeeeee"
-      />
-        <Post 
-      author="Darui"
-      content="Eploucas"
-      />
+      <Post />
     </main>
    </div>
     </div>

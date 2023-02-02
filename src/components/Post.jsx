@@ -3,7 +3,7 @@ export function Post() {
     return (
         <article className={styles.Post}>
             <header>
-                <div >
+                <div className={styles.author}>
                     <img src="http://github.com/ReinaldoARamos.png" alt="" className={styles.avatar} /> 
                     <div className={styles.authorInfo}>
                         <strong>Reinaldo Ramos</strong>

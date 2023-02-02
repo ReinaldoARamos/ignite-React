@@ -25,5 +25,32 @@
 }
 
 .Post time{
+    color: var(--grey-400);
     font-size: 0.875rem;
+}
+.author{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.authorInfo strong{
+    display: block; /*força os elementos a quebrarem a linha*/
+    color: var(--grey-100);
+    line-height: 1.6rem;
+}
+
+
+.authorInfo span{
+    display: block; /*força os elementos a quebrarem a linha*/
+    color: var(--grey-100);
+    line-height: 1.6rem;
+}
+
+.author img{
+    height: 4rem;
+    border-radius: 8px;
+    padding: 4px 4px 4px;
+    border: 1px solid var(--green-500);
+    outline: 2px solid var(--green-500);
 }

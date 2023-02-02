@@ -1,9 +1,10 @@
+import styles from "./Post.module.css"
 export function Post() {
     return (
-        <article className={styles.post}>
+        <article className={styles.Post}>
             <header>
-                <div className={styles.post}>
-                    <img src="" alt="" className={styles.avatar} /> 
+                <div >
+                    <img src="http://github.com/ReinaldoARamos.png" alt="" className={styles.avatar} /> 
                     <div className={styles.authorInfo}>
                         <strong>Reinaldo Ramos</strong>
                         <span>Web Developer</span>
@@ -13,7 +14,6 @@ export function Post() {
                 <time>Publicado há 1h</time>
             </header>
         </article>
-       
     )
        
     

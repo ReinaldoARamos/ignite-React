@@ -17,3 +17,13 @@
  .content p{
     margin-top: 1rem;
  }
+
+.Post > header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Post time{
+    font-size: 0.875rem;
+}

@@ -19,6 +19,19 @@ export function Post() {
           <p> de usuário para ter uma ideia de como fazer um orçamento para limpar </p> 
          <p>o nome da empresa para que eu possa fazer um novo anúncio.</p>   
             </div>
+
+            <form className={styles.commentForm}>
+                <strong>
+                    Deixe seu feedback
+
+                </strong>
+
+                <textarea 
+                placeholder="Deixe seu comentario"
+                />
+
+                <button type="submit">Enviar</button>
+            </form>
         </article>
     )
        

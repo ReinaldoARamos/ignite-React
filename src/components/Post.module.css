@@ -54,3 +54,43 @@
     border: 1px solid var(--green-500);
     outline: 2px solid var(--green-500);
 }
+
+.commentForm{
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top:  1px solid var(--grey-400);
+    width: 100%;
+}
+
+.commentForm strong{
+    line-height: 1.6rem;
+    color:  var(--grey-100);
+}
+
+.commentForm textarea{
+    width: 100%;
+    background: var(--grey-700);
+    border: 0;
+    resize: none;
+    height: 6rem;
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--grey-100);
+    line-height: 1.6rem;
+    margin-top: 1rem;
+}
+
+.commentForm button{
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    color: white;
+    background: var(--green-500);
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.commentForm button:hover {
+    background-color: purple;
+}

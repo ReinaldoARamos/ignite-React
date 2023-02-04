@@ -89,9 +89,20 @@
     font-weight: bold;
     cursor: pointer;
     transition: color 0.2s, background-color 0.2s;
+
+   
+}
+.commentForm footer{
+    visibility: hidden;
+    max-height: 0;
     
 }
 
+.commentForm:focus-within footer{
+    visibility: visible;
+    max-height: none;
+    
+}
 .commentForm button:hover {
     background-color: var(--green-300);
 }

@@ -30,7 +30,7 @@ export function Post() {
                 placeholder="Deixe seu comentario"
                 />
 
-                <button type="submit">Enviar</button>
+                <button type="submit">Comentar</button>
             </form>
         </article>
     )

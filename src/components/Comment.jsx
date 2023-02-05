@@ -1,4 +1,5 @@
 import styles from "./Comment.module.css";
+import { ThumbsUp, Trash } from "phosphor-react";
 
 export function Comment() {
   return (
@@ -13,11 +14,17 @@ export function Comment() {
               Publico há 1h
             </time>
           </div>
+          <button title="Deletar">
+            <Trash size={20} />
+            </button>
        </header>
        <p>Parabens buxa</p>
        </div>  
         <footer>
-            Aplaudir
+            <button title="Aplaudir">
+                <ThumbsUp size={20}/>
+                Aplaudir <span>20</span>
+            </button>
         </footer>
         </div>
    

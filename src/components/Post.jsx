@@ -37,6 +37,8 @@ export function Post() {
             </form>
             <div className={styles.commentList}>
                 <Comment />
+                <Comment />
+                <Comment />
             </div>
         </article>
     )

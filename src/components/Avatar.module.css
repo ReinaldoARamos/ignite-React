@@ -1,7 +1,7 @@
 .avatar{
     height: 4rem;
-    margin-top: -2rem;
-    border-radius: 100px;
+  
+    border-radius: 8px;
     overflow: hidden;
     padding: 4px 4px 4px;
    
@@ -10,7 +10,7 @@
 .avatarWithBorder{
     height: 4rem;
     margin-top: -2rem;
-    border-radius: 100px;
+    border-radius: 8px;
     overflow: hidden;
     padding: 4px 4px 4px;
     border: 4px solid var(--grey-600);

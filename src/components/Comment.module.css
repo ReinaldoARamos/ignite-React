@@ -68,7 +68,16 @@
     align-items: center;
 }
 
+.commentBox footer button:hover{
+    color: var(--green-300);
+}
 .commentBox footer button svg{
     margin-right: 0.5rem;
+
+}
+
+.commentBox footer button span::before{
+    content: "\2022";
+    padding: 0 0.2rem;
 }
 

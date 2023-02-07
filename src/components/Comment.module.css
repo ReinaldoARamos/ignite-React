@@ -22,7 +22,7 @@
 
 .commentContent header {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /*Para deixar os itens no inicio*/
     justify-content: space-between;
 }
 
@@ -51,7 +51,24 @@
 }
 
 .comment header button:hover {
-    background: var(--red-500);
+    color: var(--red-500);
 }
 
+.commentBox footer{
+    margin-top: 1rem;
+}
+
+.commentBox footer button{
+    background: transparent;
+    border: 0;
+    color: var(--grey-400);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+}
+
+.commentBox footer button svg{
+    margin-right: 0.5rem;
+}
 

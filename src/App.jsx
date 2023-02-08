@@ -44,6 +44,8 @@ const post = [
     ],
     publishedAt: new Date('2022-05-10 20:00:00')
   },
+
+  
 ]
 function App() {
   const [count, setCount] = useState(0)
@@ -55,8 +57,13 @@ function App() {
    <div className={styles.wrapper}>
     <Sidebar/>
     <main>
-      <Post />
-      <Post />
+     {post.map(post => {
+      return <Post
+      author={post.author} 
+      content={post.content}
+      publishedAt={post.publishedAt}
+      />
+     })}
      
     </main>
    

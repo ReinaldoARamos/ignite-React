@@ -1,10 +1,11 @@
 import { Avatar } from "./Avatar"
 import { Comment } from "./Comment"
 import styles from "./Post.module.css"
-export function Post() {
-
-    /*
-      <header>
+export function Post(props) {
+    console.log(props)
+    return (
+        <article className={styles.Post}>
+            <header>
     
                 
             <div className={styles.author}>
@@ -23,10 +24,6 @@ export function Post() {
           <p> de usuário para ter uma ideia de como fazer um orçamento para limpar </p> 
          <p>o nome da empresa para que eu possa fazer um novo anúncio.</p>   
             </div>
-    */ 
-    return (
-        <article className={styles.Post}>
-          
 
   
             <form className={styles.commentForm}>

@@ -1,22 +1,22 @@
 import { Avatar } from "./Avatar"
 import { Comment } from "./Comment"
 import styles from "./Post.module.css"
-export function Post(props) {
-    console.log(props)
+export function Post({author}) {
+    
     return (
         <article className={styles.Post}>
             <header>
     
                 
             <div className={styles.author}>
-                    <Avatar src={props.author.avatarUrl} /> 
+                    <Avatar src={author.avatarUrl} /> 
                     <div className={styles.authorInfo}>
-                    <strong>{props.author.name}</strong>
-                        <span>{props.author.role}</span>
+                    <strong>{author.name}</strong>
+                        <span>{author.role}</span>
                     </div>
                 </div>
 
-                <time>{props.publishedAt}</time>
+                <time>1h</time>
             </header>
 
             <div className={styles.content}>

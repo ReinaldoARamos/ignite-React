@@ -9,14 +9,14 @@ export function Post(props) {
     
                 
             <div className={styles.author}>
-                    <Avatar src="http://github.com/ReinaldoARamos.png"  /> 
+                    <Avatar src={props.author.avatarUrl} /> 
                     <div className={styles.authorInfo}>
-                    <strong>Reinaldo Ramos</strong>
-                        <span>Web Developer</span>
+                    <strong>{props.author.name}</strong>
+                        <span>{props.author.role}</span>
                     </div>
                 </div>
 
-                <time>Publicado há 1h</time>
+                <time>{props.publishedAt}</time>
             </header>
 
             <div className={styles.content}>

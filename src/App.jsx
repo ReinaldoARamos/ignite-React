@@ -33,7 +33,7 @@ const post = [
     id:2,
     
     author:{
-      avatarUrl: 'https://github.com/ReinaldoARamos.png',
+      avatarUrl: 'https://i.pinimg.com/564x/9a/65/d6/9a65d6ae8c86621bbfbf497f4a039d7a.jpg',
       name: "Dario C",
       role: "Web Developer"
     },

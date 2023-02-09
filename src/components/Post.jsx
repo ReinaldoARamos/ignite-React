@@ -3,7 +3,7 @@ import { Comment } from "./Comment"
 import styles from "./Post.module.css"
 import {format, formatDistanceToNow} from 'date-fns';
 import ptBr from 'date-fns/locale/pt-BR'
-export function Post({author, publishedAt}) {
+export function Post({author, publishedAt, content}) {
     const publishedDateFormatted = format(publishedAt,"d 'de' LLLL 'as' HH:mm'h", {
         locale:ptBr
     })
@@ -25,13 +25,17 @@ export function Post({author, publishedAt}) {
                     </div>
                 </div>
 
-                <time title={publishedDateFormatted} dateTime="2022-05-11 08:13:30">{publishedDateRelativeToNow}</time>
+                <time title={publishedDateFormatted} dateTime={publishedAt.toISOString()}>{publishedDateRelativeToNow}</time>
             </header>
 
             <div className={styles.content}>
-           <p> Esse é o tal jogo que é melhor que o "God of war 4" </p>
-          <p> de usuário para ter uma ideia de como fazer um orçamento para limpar </p> 
-         <p>o nome da empresa para que eu possa fazer um novo anúncio.</p>   
+                {content.map(line=>{
+                    if(line.type === 'paragraph'){
+                        return(
+                            <p>{line.content}</p>
+                        )
+                    }
+                })}
             </div>
 
   

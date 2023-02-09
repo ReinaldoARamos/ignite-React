@@ -1,13 +1,10 @@
 import { Avatar } from "./Avatar"
 import { Comment } from "./Comment"
 import styles from "./Post.module.css"
+import {format} from 'date-fns';
 export function Post({author, publishedAt}) {
-    const publishedDateFormatted = new Intl.DateTimeFormat('pt-br', {
-        day: '2-digit',
-        month: 'long',
-        hour:'2-digit',
-        minute:'2-digit'
-    }).format(publishedAt)
+    const publishedDateFormatted = format(publishedAt,"d 'de' LLLL 'as' HH:mm'h")
+ 
     return (
         <article className={styles.Post}>
             <header>
@@ -21,7 +18,7 @@ export function Post({author, publishedAt}) {
                     </div>
                 </div>
 
-                <time>{publishedDateFormatted}</time>
+                <time title="" dateTime="2022-05-11 08:13:30">{publishedDateFormatted}</time>
             </header>
 
             <div className={styles.content}>

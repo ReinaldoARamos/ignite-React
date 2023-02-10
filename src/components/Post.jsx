@@ -3,6 +3,12 @@ import { Comment } from "./Comment"
 import styles from "./Post.module.css"
 import {format, formatDistanceToNow} from 'date-fns';
 import ptBr from 'date-fns/locale/pt-BR'
+
+const comment = [
+    1,
+    2,
+    3
+]
 export function Post({author, publishedAt, content}) {
     const publishedDateFormatted = format(publishedAt,"d 'de' LLLL 'as' HH:mm'h", {
         locale:ptBr
@@ -12,6 +18,11 @@ export function Post({author, publishedAt, content}) {
             locale: ptBr,
             addSuffix: true,
         })
+
+        function handleComment() {
+            event.preventDefault();
+            console.log("oi")
+        }
     return (
         <article className={styles.Post}>
             <header>
@@ -39,7 +50,7 @@ export function Post({author, publishedAt, content}) {
             </div>
 
   
-            <form className={styles.commentForm}>
+            <form onSubmit={handleComment} className={styles.commentForm}>
                 <strong>
                     Deixe seu feedback
 
@@ -54,9 +65,9 @@ export function Post({author, publishedAt, content}) {
                 
             </form>
             <div className={styles.commentList}>
-                <Comment />
-                <Comment />
-                <Comment />
+                    {comment.map(line => {
+                        return <Comment/>
+                    })}
             </div>
         </article>
     )

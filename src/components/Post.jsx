@@ -6,7 +6,7 @@ import ptBr from "date-fns/locale/pt-BR";
 import { useState } from "react";
 
 export function Post({ author, publishedAt, content }) {
-  const [comment, setComment] = useState([1, 2, 3]);
+  const [comment, setComment] = useState([1, 2, 3]);  //criando o state e a função que altera o valor
 
   const publishedDateFormatted = format(
     publishedAt,
@@ -23,7 +23,7 @@ export function Post({ author, publishedAt, content }) {
 
   function handleComment() {
     event.preventDefault();
-    setComment([1,2,3,4])
+    setComment([1,2,3,4]) //alterando o estado via setComment
   }
   return (
     <article className={styles.Post}>

@@ -65,7 +65,7 @@ export function Post({ author, publishedAt, content }) {
         </footer>
       </form>
       <div className={styles.commentList}>
-        {comment.map((line) => {
+        {comment.map((comment) => {
           return <Comment content={comment}/>;
         })}
       </div>

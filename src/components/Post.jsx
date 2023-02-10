@@ -10,6 +10,8 @@ export function Post({ author, publishedAt, content }) {
     [
         "oi..."
     ]);  //criando o state e a função que altera o valor
+    
+    const [newCommentText , setnewCommentText] = useState(''); 
 
   const publishedDateFormatted = format(
     publishedAt,
@@ -24,10 +26,15 @@ export function Post({ author, publishedAt, content }) {
     addSuffix: true,
   });
 
+  function handleNewCommentChange() {
+    setnewCommentText(event.target.value);
+   
+  }
   function handleComment() {
     event.preventDefault();
    const newCommentText = event.target.comment.value
    setComment([...comment, newCommentText])
+   setnewCommentText('');
   }
   return (
     <article className={styles.Post}>
@@ -59,7 +66,7 @@ export function Post({ author, publishedAt, content }) {
       <form onSubmit={handleComment} className={styles.commentForm}>
         <strong>Deixe seu feedback</strong>
 
-        <textarea placeholder="Deixe seu comentario" name="comment" />
+        <textarea placeholder="Deixe seu comentario" name="comment" onChange={handleNewCommentChange} value={newCommentText} />
         <footer>
           <button type="submit">Comentar</button>
         </footer>

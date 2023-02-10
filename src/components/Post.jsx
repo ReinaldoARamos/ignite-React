@@ -26,8 +26,8 @@ export function Post({ author, publishedAt, content }) {
 
   function handleComment() {
     event.preventDefault();
-    setComment([...comment, comment.length + 1]) //alterando o estado via setComment
-    //usando o spread(le a variavel com os valores atuais ecopia + o tamanho do array + 1)
+   const newCommentText = event.target.comment.value
+   setComment([...comment, newCommentText])
   }
   return (
     <article className={styles.Post}>
@@ -59,7 +59,7 @@ export function Post({ author, publishedAt, content }) {
       <form onSubmit={handleComment} className={styles.commentForm}>
         <strong>Deixe seu feedback</strong>
 
-        <textarea placeholder="Deixe seu comentario" />
+        <textarea placeholder="Deixe seu comentario" name="comment" />
         <footer>
           <button type="submit">Comentar</button>
         </footer>

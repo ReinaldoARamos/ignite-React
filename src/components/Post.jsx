@@ -23,7 +23,8 @@ export function Post({ author, publishedAt, content }) {
 
   function handleComment() {
     event.preventDefault();
-    setComment([1,2,3,4]) //alterando o estado via setComment
+    setComment([...comment, comment.length + 1]) //alterando o estado via setComment
+    //usando o spread(le a variavel com os valores atuais ecopia + o tamanho do array + 1)
   }
   return (
     <article className={styles.Post}>

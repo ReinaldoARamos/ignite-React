@@ -26,6 +26,9 @@ export function Post({ author, publishedAt, content }) {
     addSuffix: true,
   });
 
+  function deleteComment(comment) {
+    console.log(`deletar comentario ${comment}`)
+  }
   function handleNewCommentChange() {
     setnewCommentText(event.target.value);
    
@@ -73,7 +76,7 @@ export function Post({ author, publishedAt, content }) {
       </form>
       <div className={styles.commentList}>
         {comment.map((comment) => {
-          return <Comment content={comment}/>;
+          return <Comment content={comment} deleteComment={deleteComment}/>;
         })}
       </div>
     </article>

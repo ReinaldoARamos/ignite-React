@@ -25,6 +25,9 @@ export function Post({ author, publishedAt, content }) {
     locale: ptBr,
     addSuffix: true,
   });
+  function handleCommentInvalid() {
+    console.log(event)
+  }
 
   function deleteComment(commentToDelete) {
     const commentWithoutDeleteOne = comment.filter(comments => {
@@ -73,9 +76,10 @@ export function Post({ author, publishedAt, content }) {
       <form onSubmit={handleComment} className={styles.commentForm}>
         <strong>Deixe seu feedback</strong>
 
-        <textarea placeholder="Deixe seu comentario" name="comment" onChange={handleNewCommentChange} value={newCommentText} />
+        <textarea placeholder="Deixe seu comentario" name="comment" onChange={handleNewCommentChange} value={newCommentText} required onInvalid={handleCommentInvalid}/>
         <footer>
           <button type="submit">Comentar</button>
+
         </footer>
       </form>
       <div className={styles.commentList}>

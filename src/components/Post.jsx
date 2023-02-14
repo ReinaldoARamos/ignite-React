@@ -27,10 +27,11 @@ export function Post({ author, publishedAt, content }) {
   });
 
   function deleteComment(commentToDelete) {
-    const commentWithoutDeleteOne = comment.filter(comment => {
-      return comment ===! commentToDelete
+    const commentWithoutDeleteOne = comment.filter(comments => {
+      return comments ===! commentToDelete
     })
-    setComment(commentWithoutDeleteOne)
+    
+   setComment(commentWithoutDeleteOne)
   }
   function handleNewCommentChange() {
     setnewCommentText(event.target.value);

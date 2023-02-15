@@ -26,7 +26,7 @@ export function Post({ author, publishedAt, content }) {
     addSuffix: true,
   });
   function handleCommentInvalid() {
-    console.log(event)
+    event.target.setcCustomValidity("Este campo é obrigatório")
   }
 
   function deleteComment(commentToDelete) {

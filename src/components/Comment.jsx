@@ -5,11 +5,13 @@ import { useState } from "react";
 
 export function Comment({content, deleteComment}) {
   const [likeCount, setLikeCount] = useState(0); 
-  
 
   function handleDelete() {
     deleteComment(content);
    // console.log(content)
+  }
+  function handleLikeCount() {
+    setLikeCount(likeCount +1 )
   }
   return (
     <div className={styles.comment}>
@@ -31,8 +33,11 @@ export function Comment({content, deleteComment}) {
        </div>  
         <footer>
             <button title="Aplaudir">
-                <ThumbsUp size={20}/>
-                Aplaudir <span>20</span>
+                <ThumbsUp 
+                onClick={handleLikeCount}
+                size={20}
+                 />
+                Aplaudir <span>{likeCount}</span>
             </button>
         </footer>
         </div>

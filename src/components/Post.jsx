@@ -25,13 +25,10 @@ export function Post({ author, publishedAt, content }) {
     locale: ptBr,
     addSuffix: true,
   });
-  function handleCommentInvalid() {
-    event.target.setcCustomValidity("Este campo é obrigatório")
-  }
 
   function deleteComment(commentToDelete) {
-    const commentWithoutDeleteOne = comment.filter(comments => {
-      return comments ===! commentToDelete
+    const commentWithoutDeleteOne = comment.filter(comments=> {
+      return comments != commentToDelete
     })
     
    setComment(commentWithoutDeleteOne)
@@ -76,10 +73,9 @@ export function Post({ author, publishedAt, content }) {
       <form onSubmit={handleComment} className={styles.commentForm}>
         <strong>Deixe seu feedback</strong>
 
-        <textarea placeholder="Deixe seu comentario" name="comment" onChange={handleNewCommentChange} value={newCommentText} required onInvalid={handleCommentInvalid}/>
+        <textarea placeholder="Deixe seu comentario" name="comment" onChange={handleNewCommentChange} value={newCommentText} />
         <footer>
           <button type="submit">Comentar</button>
-
         </footer>
       </form>
       <div className={styles.commentList}>

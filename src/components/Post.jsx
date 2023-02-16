@@ -31,7 +31,7 @@ export function Post({ author, publishedAt, content }) {
 
   function deleteComment(commentToDelete) {
     const commentWithoutDeleteOne = comment.filter(comments => {
-      return comments ===! commentToDelete
+      return comments != commentToDelete
     })
     
    setComment(commentWithoutDeleteOne)
@@ -76,9 +76,9 @@ export function Post({ author, publishedAt, content }) {
       <form onSubmit={handleComment} className={styles.commentForm}>
         <strong>Deixe seu feedback</strong>
 
-        <textarea placeholder="Deixe seu comentario" name="comment" onChange={handleNewCommentChange} value={newCommentText} required onInvalid={handleCommentInvalid}/>
+        <textarea placeholder="Deixe seu comentario" name="comment" onChange={handleNewCommentChange} value={newCommentText} />
         <footer>
-          <button type="submit">Comentar</button>
+          <button type="submit" disabled={newCommentText.length === 0}>Comentar</button>
 
         </footer>
       </form>

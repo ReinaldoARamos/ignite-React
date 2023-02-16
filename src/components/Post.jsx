@@ -78,7 +78,7 @@ export function Post({ author, publishedAt, content }) {
 
         <textarea placeholder="Deixe seu comentario" name="comment" onChange={handleNewCommentChange} value={newCommentText} />
         <footer>
-          <button type="submit" disabled={newCommentText.length === 0}>Comentar</button>
+          <button type="submit" className="commentButton" disabled={newCommentText.length === 0}>Comentar</button>
 
         </footer>
       </form>

@@ -26,7 +26,7 @@ export function Comment({content, deleteComment}) {
        <p>{content}</p>
        </div>  
         <footer>
-            <button title="Aplaudir">
+            <button  title="Aplaudir">
                 <ThumbsUp size={20}/>
                 Aplaudir <span>20</span>
             </button>

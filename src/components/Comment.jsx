@@ -4,7 +4,8 @@ import { Avatar } from "./Avatar";
 import { useState } from "react";
 
 export function Comment({content, deleteComment}) {
-  const [likeCount, setLikeCount] = useState(0);
+  const [likeCount, setLikeCount] = useState(0); 
+  
 
   function handleDelete() {
     deleteComment(content);
